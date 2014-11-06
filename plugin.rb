@@ -7,8 +7,8 @@ gem 'omniauth-twitch', '0.1.2'
 
 class TwitchAuthenticator < ::Auth::Authenticator
 
-  CLIENT_ID = ENV["twitch_client_id"]
-  CLIENT_SECRET = ENV["twitch_client_secret"]
+  CLIENT_ID = ENV["TWITCH_CLIENT_ID"]
+  CLIENT_SECRET = ENV["TWITCH_CLIENT_SECRET"]
 
   def name
     'twitch'
