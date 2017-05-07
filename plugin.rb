@@ -3,7 +3,7 @@
 # version: 1.0.0
 # author: Night (nightdev.com)
 
-gem 'omniauth-twitch', '0.1.2'
+gem 'omniauth-twitch', '0.2.0'
 
 class TwitchAuthenticator < ::Auth::Authenticator
 
@@ -20,8 +20,8 @@ class TwitchAuthenticator < ::Auth::Authenticator
     # grab the info we need from omni auth
     data = auth_token[:info]
     extra = auth_token[:extra]
-    username = data["name"]
-    name = extra["display_name"]
+    username = data["nickname"]
+    name = data["name"]
     email = data["email"]
     twitch_uid = auth_token["uid"]
 
