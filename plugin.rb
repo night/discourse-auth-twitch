@@ -58,16 +58,13 @@ auth_provider :title => 'with Twitch',
     :message => 'Log in with Twitch (Make sure pop up blockers are not enabled).',
     :frame_width => 920,
     :frame_height => 800,
-    :authenticator => TwitchAuthenticator.new
+    :authenticator => TwitchAuthenticator.new,
+    :icon => 'fab-twitch'
 
 register_css <<CSS
 
 .btn-social.twitch {
   background: #6441A5;
-}
-
-.btn-social.twitch:before {
-  content: "\\f1e8";
 }
 
 CSS
