@@ -1,9 +1,9 @@
 # name: Twitch
 # about: Authenticate to Discourse with Twitch
-# version: 1.0.0
+# version: 1.0.1
 # author: Night (nightdev.com)
 
-gem 'omniauth-twitch', '0.2.0'
+gem 'omniauth-twitch', '1.0.0'
 
 class TwitchAuthenticator < ::Auth::Authenticator
 
@@ -50,7 +50,7 @@ class TwitchAuthenticator < ::Auth::Authenticator
     omniauth.provider :twitch,
      CLIENT_ID,
      CLIENT_SECRET,
-     scope: 'user_read'
+     scope: 'user:read:email'
   end
 end
 
