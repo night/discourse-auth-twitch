@@ -1,9 +1,9 @@
 # name: Twitch
 # about: Authenticate to Discourse with Twitch
-# version: 1.0.1
+# version: 1.0.2
 # author: Night (nightdev.com)
 
-gem 'omniauth-twitch', '1.0.0'
+gem 'omniauth-twitch', '1.1.0'
 
 class TwitchAuthenticator < ::Auth::Authenticator
 
@@ -60,6 +60,8 @@ auth_provider :title => 'with Twitch',
     :frame_height => 800,
     :authenticator => TwitchAuthenticator.new,
     :icon => 'fab-twitch'
+
+register_svg_icon "fab fa-twitch" if respond_to?(:register_svg_icon)
 
 register_css <<CSS
 
