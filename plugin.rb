@@ -54,7 +54,7 @@ class TwitchAuthenticator < ::Auth::Authenticator
   end
 end
 
-auth_provider :title => 'with Twitch',
+auth_provider :title => 'Twitch',
     :message => 'Log in with Twitch (Make sure pop up blockers are not enabled).',
     :frame_width => 920,
     :frame_height => 800,
