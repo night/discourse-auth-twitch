@@ -5,13 +5,20 @@
 
 gem 'omniauth-twitch', '1.1.0'
 
-class TwitchAuthenticator < ::Auth::Authenticator
+enabled_site_setting :sign_in_with_twitch_enabled
 
-  CLIENT_ID = ENV["TWITCH_CLIENT_ID"]
-  CLIENT_SECRET = ENV["TWITCH_CLIENT_SECRET"]
+class TwitchAuthenticator < ::Auth::ManagedAuthenticator
 
   def name
     'twitch'
+  end
+
+  def can_revoke?
+    true
+  end
+
+  def can_connect_existing_user?
+    true
   end
 
   def enabled?
@@ -52,8 +59,8 @@ class TwitchAuthenticator < ::Auth::Authenticator
 
   def register_middleware(omniauth)
     omniauth.provider :twitch,
-     CLIENT_ID,
-     CLIENT_SECRET,
+     SiteSetting.twitch_client_id,
+     SiteSetting.twitch_client_secret,
      scope: 'user:read:email'
   end
 end
