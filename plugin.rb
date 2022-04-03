@@ -14,6 +14,10 @@ class TwitchAuthenticator < ::Auth::Authenticator
     'twitch'
   end
 
+  def enabled?
+    SiteSetting.sign_in_with_twitch_enabled?
+  end
+
   def after_authenticate(auth_token)
     result = Auth::Result.new
 
