@@ -1,0 +1,8 @@
+en:
+  js:
+    login:
+      twitch:
+        name: "Twitch"
+        title: "with Twitch"
+        sr_title: "Login with Twitch"
+        message: "Authenticating with Twitch"

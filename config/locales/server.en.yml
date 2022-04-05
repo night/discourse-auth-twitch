@@ -1,0 +1,5 @@
+en:
+  site_settings:
+    sign_in_with_twitch_enabled: 'Enable sign in with Twitch?'
+    twitch_client_id: '(Sign in with Twitch) The twitch Client ID from developre console https://dev.twitch.tv/console/apps'
+    twitch_client_secret: '(Sign in with Twitch) The twitch Client Secret fom the developer console'

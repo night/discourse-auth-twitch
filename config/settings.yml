@@ -1,0 +1,10 @@
+plugins:
+  sign_in_with_twitch_enabled:
+    default: false
+    client: false
+  twitch_client_id:
+    default: ''
+    client: false
+  twitch_client_secret:
+    default: ''
+    client: false
