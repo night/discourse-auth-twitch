@@ -1,9 +1,10 @@
 # name: Twitch
 # about: Authenticate to Discourse with Twitch
-# version: 1.0.2
+# version: 1.0.3
 # author: Night (nightdev.com)
 
-gem 'omniauth-twitch', '1.1.0'
+gem 'omniauth-twitch', '1.2.0'
+gem 'omniauth-rails_csrf_protection', '1.2.0'
 
 class TwitchAuthenticator < ::Auth::Authenticator
 
@@ -12,6 +13,10 @@ class TwitchAuthenticator < ::Auth::Authenticator
 
   def name
     'twitch'
+  end
+
+  def enabled?
+    true
   end
 
   def after_authenticate(auth_token)
@@ -54,10 +59,8 @@ class TwitchAuthenticator < ::Auth::Authenticator
   end
 end
 
-auth_provider :title => 'with Twitch',
-    :message => 'Log in with Twitch (Make sure pop up blockers are not enabled).',
-    :frame_width => 920,
-    :frame_height => 800,
+auth_provider :pretty_name => 'Twitch',
+    :title => 'Sign in with Twitch',
     :authenticator => TwitchAuthenticator.new,
     :icon => 'fab-twitch'
 
