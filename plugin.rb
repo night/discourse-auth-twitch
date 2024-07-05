@@ -4,7 +4,6 @@
 # author: Night (nightdev.com)
 
 gem 'omniauth-twitch', '1.2.0'
-gem 'omniauth-rails_csrf_protection', '1.0.2'
 
 class TwitchAuthenticator < ::Auth::Authenticator
 
