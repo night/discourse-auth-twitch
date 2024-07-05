@@ -67,8 +67,8 @@ register_svg_icon "fab fa-twitch" if respond_to?(:register_svg_icon)
 
 register_css <<CSS
 
-.btn-social.twitch {
-  background: #6441A5;
+.btn-social.twitch .svg-icon {
+  color: #9146FF;
 }
 
 CSS
