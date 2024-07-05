@@ -1,4 +1,4 @@
-# name: Twitch
+# name: discourse-auth-twitch
 # about: Authenticate to Discourse with Twitch
 # version: 1.0.3
 # author: Night (nightdev.com)
